@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 struct Student {
     char name[50];
     int roll;
@@ -9,9 +8,7 @@ struct Student {
 int main() {
     struct Student s;
     printf("ENTER THE STUDENT NAME: ");
-    getchar();
-    fgets(s.name, sizeof(s.name), stdin);
-    s.name[strcspn(s.name, "\n")] = 0;
+    scanf("%s",s.name);
     printf("ENTER THE STUDENT ROLL NUMBER: ");
     scanf("%d", &s.roll);
     printf("ENTER THE MARKS OF PHYSICS: ");
